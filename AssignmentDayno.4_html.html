@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 25px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    fieldset {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Shopping Feedback Form</h2>
+    <p>We’d love to hear about your shopping experience!</p>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="message">Your Feedback:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Tell us about your shopping experience..." required></textarea>
+
+    <fieldset>
+      <legend>Gender</legend>
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female" required> Female</label>
+      <label><input type="radio" name="gender" value="other" required> Other</label>
+    </fieldset>
+
+    <label><input type="checkbox" name="subscribe"> Subscribe to shopping updates</label>
+
+    <input type="submit" value="Submit Feedback">
+  </form>
+
+</body>
+</html>
