@@ -1,0 +1,7 @@
+box {
+  width: 300px;
+  background: lightblue;
+  padding: 20px;
+  border: 2px solid navy;
+  font-weight: bold;
+}
