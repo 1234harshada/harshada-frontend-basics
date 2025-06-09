@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Button with Online Image</title>
+  <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .creative-button {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 32px;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .creative-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .icon-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="creative-button">
+    <img src="https://i.pinimg.com/736x/1c/d7/d4/1cd7d4c1ae3b1210a07a36a39433ad49.jpg" alt="icon" class="icon-img">
+    Click Me
+  </button>
+
+</body>
+</html>

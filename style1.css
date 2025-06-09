@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 box {
   width: 300px;
   background: lightblue;
   padding: 20px;
   border: 2px solid navy;
   font-weight: bold;
+=======
+box {
+  width: 300px;
+  background: lightblue;
+  padding: 20px;
+  border: 2px solid navy;
+  font-weight: bold;
+>>>>>>> 226799a7e7833afcef5649ee91f17558b7366c56
 }

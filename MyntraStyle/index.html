@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Myntra Clone - Girls Jewellery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      gap: 30px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .nav-center a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-center a:hover {
+      color: #ff3f6c;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      padding: 7px 15px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      width: 300px;
+      font-size: 14px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .nav-right div:hover {
+      color: #ff3f6c;
+      cursor: pointer;
+    }
+
+    .breadcrumbs {
+      padding: 10px 30px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .main-container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 20%;
+      padding-right: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar h4 {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .sidebar label {
+      display: block;
+      margin: 5px 0;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      width: 80%;
+      padding-left: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .card h4 {
+      margin: 10px 0 5px;
+    }
+
+    .card .price {
+      font-weight: bold;
+      color: #ff3f6c;
+    }
+
+    .card .strike {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrnmr3CB1oDs0WqiWPzNxENXCnRE-1yKVKw&s" alt="Myntra Logo">
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">Kids</a>
+      <a href="#">Home & Living</a>
+      <a href="#">Beauty</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products, brands and more" />
+    </div>
+
+    <div class="nav-right">
+      <div>Profile</div>
+      <div>Wishlist</div>
+      <div>Bag</div>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    Home / Accessories / Girls Jewellery
+  </div>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    <!-- Sidebar Filters -->
+    <aside class="sidebar">
+      <h3>FILTERS</h3>
+
+      <h4>CATEGORIES</h4>
+      <label><input type="checkbox"> Jewellery Set</label>
+      <label><input type="checkbox"> Bracelet</label>
+      <label><input type="checkbox"> Necklace</label>
+      <label><input type="checkbox"> Rings</label>
+
+      <h4>BRAND</h4>
+      <label><input type="checkbox"> Clovia</label>
+      <label><input type="checkbox"> Maayra</label>
+      <label><input type="checkbox"> Soulflower</label>
+
+      <h4>PRICE</h4>
+      <label><input type="checkbox"> ₹0 - ₹500</label>
+      <label><input type="checkbox"> ₹500 - ₹1000</label>
+      <label><input type="checkbox"> ₹1000 - ₹3000</label>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+      <div class="card">
+        <img src="https://elegantekids.in/cdn/shop/files/PineappleflowercandyKada.jpg?v=1691391880&width=1100" alt="Bangle">
+        <h4>Elegante Kids</h4>
+        <p>Infant Gold-Plated Bangle</p>
+        <p class="price">₹4500 <span class="strike">₹6500</span></p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.etsystatic.com/31359606/r/il/0cfc94/5096058397/il_570xN.5096058397_p4ji.jpg" alt="Necklace">
+        <h4>Simple Silver</h4>
+        <p>Chic Silver Necklace</p>
+        <p class="price">₹1500 <span class="strike">₹2000</span></p>
+      </div>
+
+      <div class="card">
+        <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14157700/2022/5/6/b8b5863e-4847-4c87-870c-b5a45fe6337e1651832162712-Yellow-Chimes-Women-Set-of-30-Multicoloured-Studs-4341651832-1.jpg" alt="Earrings">
+        <h4>Stone Shine</h4>
+        <p>Studded Earrings</p>
+        <p class="price">₹800 <span class="strike">₹1200</span></p>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/U/E/UE05496-1Y0000_11_listfront.jpg" alt="Gold Earrings">
+        <h4>GoldPlaza</h4>
+        <p>Gold-Plated Earrings</p>
+        <p class="price">₹2000 <span class="strike">₹3000</span></p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
