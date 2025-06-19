@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUENX - Premium Vegan Sneakers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+  background: #fff;
+  color: #000;
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.search-container input{
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 4px 6px;
+}
+
+.search-container i{
+  color: #333;
+  margin-left: 5px;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons i{
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.icons input{
+  margin-right: 10px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.section-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.view-all{
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+}
+
+.hero {
+  background-image: url('https://static.wixstatic.com/media/c837a6_47b79e5c794c44479756b0253e68dc65~mv2.jpg/v1/fill/w_1256,h_609,fp_0.08_0.00,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0 16px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 80px 40px 40px;
+  color: #000;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding: 60px 30px;
+  overflow: hidden;
+}
+
+.best-sellers{
+  margin: 20px;
+  border-radius: 0;
+  padding: 20px;
+}
+
+.hero-content{
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.bio-card {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 240px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bio-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.bio-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.bio-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 40px;
+}
+
+.section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card{
+  position: relative;
+  border: none;
+  text-align: left;
+}
+
+.sale-tag{
+  background: red;
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.sale-badge{
+  position: absolute;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 8px;
+  left: 10px;
+  background-image: none;
+}
+
+.kids-sale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff0e5;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.kids-sale-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.kids-sale-text p {
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #111;
+  color: white;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer .email {
+  display: flex;
+}
+
+footer .email input {
+  padding: 8px;
+  flex: 1;
+  border: none;
+}
+
+footer .email button {
+  padding: 8px 12px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+  </style>
+</head><body>
+  <header>
+    <div class="logo">QUENX.</div>
+    <nav>
+      <ul>
+        <li>Shop All</li>
+        <li>Best Sellers</li>
+        <li>Active QX</li>
+        <li>Artisanal</li>
+        <li>Kids</li>
+        <li>About Us</li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <input type="text"
+      placeholder="Search" style="padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px;"/>
+      <span>Log In</span>
+      <i class="fas fa-user"
+      title="Profile"></i>
+      <i class="fas fa-heart"
+      title="Wishlist"></i>
+      <i class="fas fa-shopping-bag"
+      title="Cart"></i>
+    </div>
+  </header>  <section class="hero">
+    <div class="hero-content">
+    <h1>WALKING WITH PURPOSE.</h1>
+    <p>Premium Vegan Sneakers</p>
+    <div class="bio-card">
+    <div class="sale-tag">SALE</div>
+      <img src="https://static.wixstatic.com/media/c837a6_f4b16c06d8b5449c954a72eb34be2b4b~mv2.jpg/v1/fill/w_358,h_268,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_f4b16c06d8b5449c954a72eb34be2b4b~mv2.jpg" alt="Bio Runner">
+      <h3>Bio Runner</h3>
+      <p><del>$119.00</del> $99.00</p>
+      <button class="btn">ADD TO CART</button>
+    </div>
+  </section>  <section class="section">
+    <div class="section-header">
+    <h2>OUR BEST SELLERS</h2>
+    <a href="#" class="view-all">View All-></a></div>
+    <div class="products">
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <img src="https://static.wixstatic.com/media/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg/v1/fill/w_299,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_9e4500e0fa504a0b9cda0a2390b5e9a8~mv2.jpg" alt="Active JR">
+        <h4>Active JR</h4>
+        <p><del>$80.00</del> $64.00</p>
+      </div>
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <img src="https://static.wixstatic.com/media/c837a6_96481ea655134a6789d7fdc909b280d2~mv2.jpg/v1/fill/w_299,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_96481ea655134a6789d7fdc909b280d2~mv2.jpg" alt="Bio Original">
+        <h4>Bio Original</h4>
+        <p>$119.00</p>
+      </div>
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <img src="https://static.wixstatic.com/media/c837a6_da34515a9ca049c9b729fa92e5f3e25f~mv2.jpg/v1/fill/w_299,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_da34515a9ca049c9b729fa92e5f3e25f~mv2.jpg" alt="Bio Perform">
+        <h4>Bio Perform</h4>
+        <p><del>$119.00</del> $99.00</p>
+      </div>
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <img src="https://static.wixstatic.com/media/c837a6_a9b28eeb2641483ab21505b3b575a752~mv2.jpg/v1/fill/w_299,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_a9b28eeb2641483ab21505b3b575a752~mv2.jpg" alt="Limited DL">
+        <h4>Limited DL</h4>
+        <p>$129.00</p>
+      </div>
+    </div>
+  </section>  <section class="kids-sale">
+    <div class="kids-sale-text">
+      <h2>KIDS COLLECTION 20% OFF SALE</h2>
+      <p>Exclusive, one time offer</p>
+      <button class="btn">SHOP NOW</button>
+    </div>
+    <img src="https://static.wixstatic.com/media/c837a6_6fdee1f4ad5943009a8f74d6d286c71a~mv2.jpg/v1/fill/w_612,h_612,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Kids%20Sale.jpg" alt="Kids sneakers" style="width: 300px; border-radius: 20px;" />
+  </section>  <footer>
+    <div>
+      <h4>SHOP</h4>
+      <ul>
+        <li>All products</li>
+        <li>Best Sellers</li>
+        <li>Active QX</li>
+        <li>Artisanal</li>
+        <li>Kids</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+    <div>
+      <h4>POLICIES</h4>
+      <ul>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+        <li>Shipping Policy</li>
+        <li>Refund Policy</li>
+        <li>Accessibility</li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONTACT</h4>
+      <p>500 Terry Francine St.</p>
+      <p>San Francisco, CA 94158</p>
+      <p>(415) 123-4567</p>
+      <p>info@quenx.com</p>
+    </div>
+    <div>
+      <h4>SOCIAL</h4>
+      <ul>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>TikTok</li>
+      </ul>
+    </div>
+    <div>
+      <h4>STAY IN THE LOOP</h4>
+      <div class="email">
+        <input type="email" placeholder="Email Address" />
+        <button>JOIN UP</button>
+      </div>
+    </div>
+  </footer>
+</body></html>
