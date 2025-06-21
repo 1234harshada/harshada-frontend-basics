@@ -1,0 +1,226 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Girls Jewellery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar img {
+      height: 40px;
+      margin-right: 20px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-left nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-right input {
+      padding: 5px 10px;
+      margin-right: 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      width: 250px;
+    }
+
+    .nav-right a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .main-content {
+      display: flex;
+      padding: 30px;
+    }
+
+    .filters {
+      width: 220px;
+      padding-right: 30px;
+    }
+
+    .breadcrumb {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .filters h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .filter-group {
+      margin-bottom: 20px;
+    }
+
+    .filter-group h4 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .filter-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      flex: 1;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    .product-card p {
+      margin: 4px 0;
+      color: #555;
+    }
+
+    /* ✅ PRICE COLOUR FIXED HERE */
+    .price {
+      color: red;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      color: #888;
+      font-weight: normal;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrnmr3CB1oDs0WqiWPzNxENXCnRE-1yKVKw&s" alt="Logo">
+      <nav>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Home & Living</a>
+        <a href="#">Beauty</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <input type="text" placeholder="Search for products, brands and more">
+      <a href="#">Profile</a>
+      <a href="#">Wishlist</a>
+      <a href="#">Bag</a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <aside class="filters">
+      <p class="breadcrumb">Home / Accessories / Girls Jewellery</p>
+      <h3>FILTERS</h3>
+
+      <div class="filter-group">
+        <h4>CATEGORIES</h4>
+        <label><input type="checkbox"> Jewellery Set</label>
+        <label><input type="checkbox"> Bracelet</label>
+        <label><input type="checkbox"> Necklace</label>
+        <label><input type="checkbox"> Rings</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>BRAND</h4>
+        <label><input type="checkbox"> Clovia</label>
+        <label><input type="checkbox"> Maayra</label>
+        <label><input type="checkbox"> Soulflower</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>PRICE</h4>
+        <label><input type="checkbox"> ₹0 - ₹500</label>
+        <label><input type="checkbox"> ₹500 - ₹1000</label>
+        <label><input type="checkbox"> ₹1000 - ₹3000</label>
+      </div>
+    </aside>
+
+    <section class="products">
+      <div class="product-card">
+        <img src="https://elegantekids.in/cdn/shop/files/PineappleflowercandyKada.jpg?v=1691391880&width=1100" alt="Bangle">
+        <h4>Elegante Kids</h4>
+        <p>Infant Gold-Plated Bangle</p>
+        <p class="price">₹4500 <span class="original">₹6500</span></p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.etsystatic.com/31359606/r/il/0cfc94/5096058397/il_570xN.5096058397_p4ji.jpg" alt="Necklace">
+        <h4>Simple Silver</h4>
+        <p>Chic Silver Necklace</p>
+        <p class="price">₹1500 <span class="original">₹2000</span></p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14157700/2022/5/6/b8b5863e-4847-4c87-870c-b5a45fe6337e1651832162712-Yellow-Chimes-Women-Set-of-30-Multicoloured-Studs-4341651832-1.jpg" alt="Earrings">
+        <h4>Stone Shine</h4>
+        <p>Studded Earrings</p>
+        <p class="price">₹800 <span class="original">₹1200</span></p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/U/E/UE05496-1Y0000_11_listfront.jpg" alt="Gold Earrings">
+        <h4>GoldPlaza</h4>
+        <p>Gold-Plated Earrings</p>
+        <p class="price">₹2000 <span class="original">₹3000</span></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
