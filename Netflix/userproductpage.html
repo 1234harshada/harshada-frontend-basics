@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix - The Witcher</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }/* Navbar */
+.navbar {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+.logo {
+  font-size: 26px;
+  color: red;
+  font-weight: bold;
+}
+.nav-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+.profile {
+  font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url("https://c4.wallpaperflare.com/wallpaper/21/919/714/the-witcher-netflix-tv-series-tv-series-henry-cavill-orange-eyes-hd-wallpaper-preview.jpg") center/cover no-repeat;
+  height: 420px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+}
+.hero-text {
+  position: relative;
+  z-index: 1;
+  padding-left: 40px;
+  top: 40%;
+  transform: translateY(-40%);
+}
+.hero-text h1 {
+  font-size: 48px;
+}
+.hero-text p {
+  margin-top: 10px;
+  max-width: 500px;
+}
+.buttons button {
+  margin: 10px 10px 0 0;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.buttons button:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Show Info */
+.info {
+  padding: 20px 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* More Like This */
+.related {
+  padding: 20px 40px;
+}
+.related h2 {
+  margin-bottom: 15px;
+}
+.related-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+.related-card {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.related-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.related-card p {
+  padding: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  padding: 40px;
+  text-align: center;
+  color: #777;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.footer-links a {
+  color: #777;
+  font-size: 14px;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .hero { height: 280px; }
+  .hero-text h1 { font-size: 24px; }
+  .hero-text p { font-size: 14px; }
+  .buttons button { font-size: 13px; padding: 8px 16px; }
+  .info { font-size: 13px; padding: 15px 20px; }
+  .related { padding: 15px 20px; }
+  .related-card img { height: 180px; }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+    <div class="profile">👤</div>
+  </header>  <!-- Hero Section -->  <section class="hero">
+    <div class="hero-text">
+      <h1>The Witcher</h1>
+      <p>Gerlat of Rivia, a mutated-hunter for hire, journeys toward his destiny in a turbulent world.</p>
+      <div class="buttons">
+        <button>▶ Play</button>
+        <button>+ My List</button>
+      </div>
+    </div>
+  </section>  <!-- Show Info -->  <div class="info">
+    ⭐ 8.1 • 2025 • 3 Seasons • Action, Fantasy, Drama
+  </div>  <!-- Related Section -->  <section class="related">
+    <h2>More Like This</h2>
+    <div class="related-row">
+      <div class="related-card">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/shadow-bone-1619124316.jpeg?crop=0.888888888888889xw:1xh;0,0&resize=1200:*" alt="Shadow and Bone" />
+        <p>Shadow and Bone</p>
+      </div>
+      <div class="related-card">
+        <img src="https://resizing.flixster.com/ux52ZqsVJYqJYviq_nAX_277DMw=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8681514_i_v8_ac.jpg" alt="Game of Thrones" />
+        <p>Game of Thrones</p>
+      </div>
+      <div class="related-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYWFjYmMxMjMtMGE2ZC00YWZhLTgzNDYtYTA3ODA2MDg2NTA4XkEyXkFqcGc@._V1_.jpg" alt="Vikings" />
+        <p>Vikings</p>
+      </div>
+      <div class="related-card">
+        <img src="https://www.q8dvd.com/site/images/movie/29151.jpg" alt="Cursed" />
+        <p>Cursed</p>
+      </div>
+    </div>
+  </section>  <!-- Footer -->  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">FAQ</a>
+      <a href="#">Help Center</a>
+      <a href="#">Account</a>
+      <a href="#">Media Center</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <p>Netflix India</p>
+  </footer>
+</body>
+</html>
