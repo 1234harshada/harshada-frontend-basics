@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Witcher - Netflix</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #111; color: #fff; }.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #000;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .logo { color: red; font-size: 28px; font-weight: bold; }
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.navbar .profile { font-size: 22px; color: #fff; }
+
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #444;
+  }
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.banner {
+  background: url("https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQd2_TAKVVSh49tvLxy4G30vLEbyGerbS__xeBNtQppqEbGdlCKVB_YBJr2yIpjxzSJ33NWjDERifUw2EenYNwOih_TiogEo60gEYsxjh4yHcUhrvwNGAqOQ_MZ3XuQgTu2T-NAFwbzpyV8Z-dd47-iNTQWY.jpg?r=960") center center / cover no-repeat;
+  height: auto;
+  min-height: 450px;
+  position: relative;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+.banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 60px 40px;
+}
+.banner-content h1 { font-size: 48px; margin-bottom: 10px; }
+.banner-content p { max-width: 600px; margin-bottom: 20px; color: #ccc; }
+.buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.info, .description, .cast, .trailer {
+  padding: 30px 40px;
+}
+
+.info {
+  color: #aaa;
+  font-size: 15px;
+}
+
+.description {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cast h2, .trailer h2 {
+  margin-bottom: 15px;
+}
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+.cast-card {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.cast-card:hover {
+  transform: translateY(-5px);
+  background: #333;
+}
+.cast-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.cast-card p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.trailer img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+  background: #000;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.footer-links a {
+  color: #777;
+  font-size: 14px;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>  <div class="navbar">
+    <div class="logo">NETFLIX</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </div>
+    <div class="profile">👤</div>
+  </div>  <div class="banner">
+    <div class="banner-content">
+      <h1>The Witcher</h1>
+      <p>Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world.</p>
+      <div class="buttons">
+        <button>▶ Play</button>
+        <button>+ My List</button>
+      </div>
+    </div>
+  </div>  <div class="info">
+    ⭐ 8.1 • 2025 • 3 Seasons • Action, Fantasy, Drama
+  </div>  <div class="description">
+    In a world full of monsters, magic, and political intrigue, Geralt the Witcher must survive brutal battles, protect the innocent, and face his destiny. Based on the best-selling novels.
+  </div>  <div class="cast">
+    <h2>Cast</h2>
+    <div class="cast-grid">
+      <div class="cast-card">
+        <img src="https://img.goodfon.com/wallpaper/big/2/9a/the-witcher-henry-cavill-vedmak-muzhchina-kon-vzgliad-mech.webp" alt="Henry Cavill">
+        <p>Henry Cavill</p>
+      </div>
+      <div class="cast-card">
+        <img src="https://metro.co.uk/wp-content/uploads/2021/12/PRI_213109098.jpg?quality=90&strip=all&w=646" alt="Anya Chalotra">
+        <p>Anya Chalotra</p>
+      </div>
+      <div class="cast-card">
+        <img src="https://i2-prod.oxfordshirelive.co.uk/incoming/article6327447.ece/ALTERNATES/s1200b/0_Frey-Allan-in-The-Witcher.jpg" alt="Freya Allan">
+        <p>Freya Allan</p>
+      </div>
+      <div class="cast-card">
+        <img src="https://i0.wp.com/redanianintelligence.com/wp-content/uploads/2022/11/jaskiershock-3-1.jpg?resize=1024%2C576&ssl=1" alt="Joey Batey">
+        <p>Joey Batey</p>
+      </div>
+      <div class="cast-card">
+        <img src="https://w0.peakpx.com/wallpaper/16/684/HD-wallpaper-tv-show-the-witcher-myanna-buring.jpg" alt="MyAnna Buring">
+        <p>MyAnna Buring</p>
+      </div>
+      <div class="cast-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDVkZjMwNWItMzAxNS00ZDY1LWEyZDktNTIwMzAxYmE0MmEwXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL75_UY281_CR31,0,500,281_.jpg" alt="Tom Canton">
+        <p>Tom Canton</p>
+      </div>
+    </div>
+  </div>  <div class="trailer">
+    <h2>Watch Trailer</h2>
+    <img src="https://img.youtube.com/vi/ndl1W4ltcmg/maxresdefault.jpg" alt="The Witcher Trailer Thumbnail">
+  </div>  <div class="footer">
+    <div class="footer-links">
+      <a href="#">FAQ</a>
+      <a href="#">Help Center</a>
+      <a href="#">Account</a>
+      <a href="#">Media Center</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <p>Netflix India </p>
+  </div></body>
+</html>
