@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix | Order History</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .logo {
+      font-size: 26px;
+      color: red;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+    .profile {
+      font-size: 20px;
+    }
+
+    /* Orders */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #e50914;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .order {
+      display: flex;
+      align-items: center;
+      background-color: #222;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .order img {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+    .order-details {
+      flex: 1;
+    }
+    .order-details h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .order-details p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 6px;
+    }
+    .btn {
+      background-color: #e50914;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: default;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+    .footer a {
+      color: #777;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .order {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .order img {
+        margin: 0 auto 15px auto;
+        width: 100%;
+        max-width: 250px;
+      }
+      .order-details h2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+    <div class="profile">👤</div>
+  </header>
+
+  <!-- Orders -->
+  <div class="container">
+    <h1>Order History</h1>
+
+    <div class="order">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/The_Witcher_s2_soundtrack.jpg/250px-The_Witcher_s2_soundtrack.jpg" alt="The Witcher">
+      <div class="order-details">
+        <h2>The Witcher</h2>
+        <p>Purchased on: 24 June 2025</p>
+        <p>Price: ₹499</p>
+        <p>Status: Confirmed</p>
+        <button class="btn">▶ Watch Again</button>
+      </div>
+    </div>
+
+    <div class="order">
+      <img src="https://images.justwatch.com/poster/320429069/s718/season-5.jpg" alt="Stranger Things">
+      <div class="order-details">
+        <h2>Stranger Things</h2>
+        <p>Purchased on: 15 June 2025</p>
+        <p>Price: ₹399</p>
+        <p>Status: Confirmed</p>
+        <button class="btn">▶ Watch Again</button>
+      </div>
+    </div>
+
+    <div class="order">
+      <img src="https://m.media-amazon.com/images/M/MV5BNDBhMmI3OWYtZTA2Ny00Y2RjLTliMWQtYWY5MGIwN2RlZGFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Extraction 2">
+      <div class="order-details">
+        <h2>Extraction 2</h2>
+        <p>Purchased on: 10 June 2025</p>
+        <p>Price: ₹349</p>
+        <p>Status: Confirmed</p>
+        <button class="btn">▶ Watch Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>
+      <a href="#">FAQ</a> |
+      <a href="#">Help Center</a> |
+      <a href="#">Account</a> |
+      <a href="#">Media Center</a> |
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Contact Us</a>
+    </p>
+    <p>Netflix India </p>
+  </div>
+
+</body>
+</html>
