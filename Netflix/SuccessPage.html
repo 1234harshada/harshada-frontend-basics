@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix | Payment Success</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .logo {
+      font-size: 26px;
+      color: red;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+    .profile {
+      font-size: 20px;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #28a745; /* ✅ Green Success Message */
+      margin-bottom: 10px;
+    }
+    .order-info {
+      font-size: 18px; /* ✅ Enlarged Thank You Message */
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+    .poster img {
+      width: 220px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    .summary {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .summary p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .btn {
+      background-color: #e50914;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 20px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+    .footer a {
+      color: #777;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .poster img {
+        width: 160px;
+      }
+      .btn {
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+    <div class="profile">👤</div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1>Payment Successful!</h1>
+    <p class="order-info">Thank you for purchasing <strong>The Witcher</strong>.</p>
+
+    <div class="poster">
+      <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-1160551,resizemode-75,msid-109426403/magazines/panache/the-witcher-season-5-confirmed-as-the-last-chapter-by-netflix.jpg" alt="The Witcher Poster">
+    </div>
+
+    <div class="summary">
+      <p><strong>Order ID:</strong> NF-20250624-9876</p>
+      <p><strong>Total Paid:</strong> ₹499</p>
+      <p><strong>Date:</strong> 24 June 2025</p>
+      <p><strong>Status:</strong> Confirmed</p>
+    </div>
+
+    <a href="#" class="btn">▶ Watch Now</a>
+
+    <div class="footer">
+      <p>
+        <a href="#">FAQ</a> |
+        <a href="#">Help Center</a> |
+        <a href="#">Account</a> |
+        <a href="#">Media Center</a> |
+        <a href="#">Terms</a> |
+        <a href="#">Privacy</a> |
+        <a href="#">Contact Us</a>
+      </p>
+      <p>Netflix India </p>
+    </div>
+  </div>
+
+</body>
+</html>
