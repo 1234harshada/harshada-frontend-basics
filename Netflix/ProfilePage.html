@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix | Profile Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .logo {
+      font-size: 26px;
+      color: red;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+    .profile {
+      font-size: 20px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+    }
+
+    /* Avatar Image */
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 4px;
+    }
+
+    .btn-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #e50914;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin: 0 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+    .footer a {
+      color: #777;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+    <div class="profile">👤</div>
+  </header>
+
+  <!-- Profile Form -->
+  <div class="container">
+    <img src="https://img.freepik.com/premium-vector/boy-with-blue-hoodie-blue-hoodie-with-hoodie-it_1230457-42660.jpg?semt=ais_items_boosted&w=740" alt="Profile Photo" class="avatar" />
+    <h2>Profile Settings</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="johndoe@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" placeholder="+91 9876543210" />
+      </div>
+      <div class="form-group">
+        <label for="password">New Password</label>
+        <input type="password" id="password" placeholder="****" />
+      </div>
+      <div class="form-group">
+        <label for="plan">Plan Type</label>
+        <select id="plan">
+          <option>Mobile</option>
+          <option>Basic</option>
+          <option>Standard</option>
+          <option>Premium</option>
+        </select>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="btn">Save</button>
+        <button type="reset" class="btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      <a href="#">FAQ</a> |
+      <a href="#">Help Center</a> |
+      <a href="#">Account</a> |
+      <a href="#">Media Center</a> |
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Contact Us</a>
+    </p>
+    <p>Netflix India </p>
+  </footer>
+
+</body>
+</html>
