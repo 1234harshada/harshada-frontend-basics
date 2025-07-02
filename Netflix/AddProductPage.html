@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Product | Netflix Seller</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .logo {
+      font-size: 26px;
+      color: red;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+    .profile {
+      font-size: 20px;
+    }
+
+    /* Form Container */
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #e50914;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-size: 14px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      background: #2c2c2c;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: 2px solid #e50914;
+    }
+
+    .btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #e50914;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ff0a16;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+    .footer a {
+      color: #777;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .container {
+        margin: 30px 20px;
+        padding: 20px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+    <div class="profile">👤</div>
+  </header>
+
+  <!-- Product Form -->
+  <div class="container">
+    <h2>Register New Product</h2>
+    <form>
+      <label for="title">Product Title (Movie/Show Name)</label>
+      <input type="text" id="title" name="title" placeholder="e.g. The Witcher" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="3" placeholder="Short description about the show" required></textarea>
+
+      <label for="price">Price (₹)</label>
+      <input type="number" id="price" name="price" placeholder="e.g. 499" required>
+
+      <label for="image">Poster Image URL</label>
+      <input type="url" id="image" name="image" placeholder="https://..." required>
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Genre --</option>
+        <option>Action</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Thriller</option>
+        <option>Sci-Fi</option>
+      </select>
+
+      <label for="year">Release Year</label>
+      <input type="number" id="year" name="year" placeholder="e.g. 2025" required>
+
+      <button type="submit" class="btn">Register Product</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>
+      <a href="#">FAQ</a> |
+      <a href="#">Help Center</a> |
+      <a href="#">Account</a> |
+      <a href="#">Media Center</a> |
+      <a href="#">Terms</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Contact Us</a>
+    </p>
+    <p>Netflix India </p>
+  </div>
+
+</body>
+</html>
